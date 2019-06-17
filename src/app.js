@@ -1,24 +1,13 @@
+const path = require('path')
 const express = require('express')
 
 const app = express()
 
-// configer waht server should do
-app.get('', (req, res)=>{ // root page
-    res.send('<h1>Weather</h1>') // send to requester
-}) 
 
-app.get('/help', (req,res)=>{
-    res.send([{
-        name: 'me'
-    }, {
-        name:'he'
-    }])
-})
+//static take the folder, this will find all the html file 
+const publicDirPath =path.join(__dirname, '../public')
+app.use(express.static(publicDirPath)) 
 
-app.get('/about', (req, res)=>{
-    res.send('<h1>About</h>') // send to requester
-
-}) 
 
 app.get('/weather', (req,res)=>{
     res.send({
