@@ -1,30 +1,40 @@
 const path = require('path')
 const express = require('express')
+const hbs = require('hbs')
 
 const app = express()
-//static take the folder, this will find all the html file 
-const publicDirPath =path.join(__dirname, '../public')
 
+//define paths for Express config
+const publicDirPath =path.join(__dirname, '../public')
+const viewsPath = path.join(__dirname, '../templates/views')
+const partialPath = path.join(__dirname, '../templates/partials')
+
+//Setup handlebars engine views location
 app.set('view engine', 'hbs') // set up handlebar for templets
+app.set('views', viewsPath) // now point express to custome directory
+hbs.registerPartials(partialPath) // contains handler bar module 
+
+//set up static directory to serve
 app.use(express.static(publicDirPath)) 
 
 app.get('', (req, res) => {
     res.render('index', {
-        title:'About me',
+        title:'Weather',
         name: 'QQQ'
     })
 })
 
 app.get('/about', (req, res) => {
     res.render('about', {
-        title:'Weather App',
-        name: 'HHHe'
+        title:'About me',
+        name: 'Qiu'
     })
 })
 
 app.get('/help', (req, res) => {
     res.render('help', {  //render to help page
         helpText:'some help text',
+        title: 'Help',
         name: 'HHHe'
     })
 })
