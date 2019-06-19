@@ -46,6 +46,27 @@ app.get('/weather', (req,res)=>{
     })
 })
 
+//match any page that havent matched so far that start with /help/
+//this is catch 404 for specific help content require
+app.get('/help/*', (req, res)=>{
+    res.render('404', {  //render to help page
+        title: '404',
+        name: 'Qiu',
+        errorMessage: 'Help article not found. '
+    })
+})
+
+//404 page, should be set at last
+//because Express match page name from begine 
+//of all render
+app.get('*', (req, res)=>{
+    res.render('404', {  //render to help page
+        title: '404',
+        name: 'Qiu',
+        errorMessage: 'Page not found!'
+    })
+})
+
 app.listen(3000, ()=>{//callback func
     console.log('Server is up on port 3000.')
 }) // 3000 port #
