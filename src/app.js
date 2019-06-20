@@ -48,7 +48,7 @@ app.get('/weather', (req,res)=>{
         })
     }
 
-    geocode(req.query.address, (error, {latitude, longtitude, location})=>{
+    geocode(req.query.address, (error, {latitude, longtitude, location} = {})=>{ // = {}, which set up the obj, so if the address not provide, the web still working properly 
         if(error){
             return res.send({ error })
         }
