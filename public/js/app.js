@@ -1,22 +1,27 @@
 console.log("Client side is set up!")
 
 const weatherForm = document.querySelector('form')
-const searchElement = document.querySelector('input')
+const search = document.querySelector('input')
+const messageOne = document.querySelector('#message-1')
+const messageTwo = document.querySelector('#message-2')
 
-weatherForm.addEventListener('submit',(event)=>{
-    event.preventDefault() //dont allow the browser to refeshed
 
-    const location = searchElement.value
-    
-    fetch('http://localhost:3000/weather?address=' + location).then((response)=>{ // set up call back function, then the process we can access response
-    response.json().then((data1)=>{ // when this access is done, we can access data
-        if(data1.error){
-            console.log(data1.error)
-        }else{
-            console.log(data.location)
-            console.log(data.forecast)
-        }
+weatherForm.addEventListener('submit', (e)=>{
+    e.preventDefault()
+
+    const location = search.value
+
+    messageOne.textContent='Loading ...'
+    messageTwo.textContent = ''
+
+    fetch('http://localhost:3000/weather?address='+location).then((response)=>{
+        response.json().then((data)=>{
+            if(data.error){
+                messageOne.textContent = data.error
+            }else{
+                messageOne.textContent = data.location
+                messageTwo.textContent = data.forecast
+            }
+        })
     })
-    })
-
 })
