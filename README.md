@@ -1,6 +1,7 @@
 # Weather App
 
 The app is developed for user to lookup weather basedon their location
+Site address: https://q-weather-application.herokuapp.com/
 
 # Get started
 - Install node js on your machine
