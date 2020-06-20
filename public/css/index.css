@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Raleway:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@400;600&display=swap');
+body {
+    width: 100%;
+    height: auto;
+}
+/*----- fliter- blur effect ---------*/
+.bg{
+    background-image: url("/img/bgm.jpg");
+    /* Background image is centered vertically and horizontally at all times */
+    background-position: center center;
+
+    /* Background image is fixed in the viewport so that it doesn't move when 
+     the content's height is greater than the image's height */
+    background-attachment: fixed;
+  
+    /* This is what makes the background image rescale based
+     on the container's size */
+    background-size: cover;
+
+    background-repeat:no-repeat;
+
+    z-index:1;
+}
+.bg:after{
+    content: "";
+    width:100%;
+    height:100%;
+    position: absolute;
+    left:0;
+    top:0;
+    background: inherit;
+    filter: blur(2px);
+    z-index: 2;
+}
+
+/*------- main-content -----------*/
+.main-container{
+    position: fixed;
+    transform: translate(-50%,-50%);
+    width:80%;
+    left: 50%;
+    top:40%;
+    font-family: 'Caveat', cursive;
+    text-align: center;
+    z-index:3;
+}
+
+/*--------- header ------*/
+header{
+    color: white;
+}
+
+h1{
+    font-size:70px;
+    text-shadow:1px 1px 1px #000;
+    margin-bottom: 1px;
+}
+header a{
+    color:white;
+    font-size:35px; 
+    margin-right: 16px;
+    text-decoration: none;
+    text-shadow:1px 1px 1px #000;
+}
+header a:hover{
+    color:#F6D6B8;
+}
+
+/*-----------------------*/
+.information{
+    margin-top: 5%;
+}
+
+.information p{
+    color:white;
+    font-size: 30px;
+    text-shadow:1px 1px 1px #000;
+}
+
+.p2{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*----------------------------*/
+footer {
+    color:white ;
+    border-top: 1px solid #eeeeee;
+    padding-top: 16px 0;
+    font-size: 30px;
+    text-shadow:1px 1px 1px #000;
+}
+
+input{
+    border: 1px solid #cccccc;
+    padding: 8px;
+}
+
+button{
+    cursor: pointer;
+    border: 1px solid #F6D6B8;
+    background: #F6D6B8;
+    color: white;
+    padding: 8px;
+}
+
+button:hover{
+    border: 1px solid white;
+    background: white;
+    color: #F6D6B8; 
+}
+
+@media only screen and (max-width: 800px) {
+    .bg {
+      /* The file size of this background image is 93% smaller
+         to improve page load speed on mobile internet connections */
+      background-image: url("/img/bgm.jpg");
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+  .bg {
+    /* The file size of this background image is 93% smaller
+       to improve page load speed on mobile internet connections */
+    background-image: url("/img/bgm.jpg");
+  }
+}
+
+
+  @media only screen and (max-width: 500px) {
+    .bg {
+      /* The file size of this background image is 93% smaller
+         to improve page load speed on mobile internet connections */
+      background-image: url("/img/bgm.jpg");
+    }
+
+    h1{
+       font-size:40px;
+    }
+
+    .main-container{
+        top: 30%;
+        margin-left: 15
+    }
+    header a{
+        font-size: 20px;
+    }
+    .information p{
+        font-size: 20px;
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    .bg {
+      /* The file size of this background image is 93% smaller
+         to improve page load speed on mobile internet connections */
+      background-image: url("/img/bgm.jpg");
+    }
+
+    h1{
+       font-size:40px;
+    }
+
+    .main-container{
+        top: 30%;
+    }
+    header a{
+        font-size: 20px;
+    }
+
+    .information p{
+        font-size: 20px;
+    }
+  }

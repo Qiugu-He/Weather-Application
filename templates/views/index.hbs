@@ -3,26 +3,30 @@
 <head>
     <title>weather</title>
     <link rel ="icon" href ="img/22.png">
-    <link rel="stylesheet" href = "/css/style.css">
+    <link rel="stylesheet" href = "/css/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
 
 <body>
-    <div class = "main-content">
+    <div class = "bg">
+        <div class = "main-container">
             {{>header}}
 
-            <p>Use this site to get your weather !!</p>
-            <form>
-                <input placeholder="Location">
-                <button>Search</button>
-            </form>
+            <div class = "information">
+                <p style="font-family: 'Montserrat', sans-serif;">Use this site to get your local Weather !</p>
+                <form>
+                    <input placeholder="Location">
+                    <button>Search</button>
+                </form>
+                <p id="message-1" style="color: #F6D6B8; font-family: 'Montserrat', sans-serif;"></p>
+                <p id="message-2" style="color: #F6D6B8; font-family: 'Montserrat', sans-serif;"></p>
+            </div>
 
-            <p id="message-1"></p>
-            <p id="message-2"></p>
+            {{>footer}}
+        </div>
     </div>    
-
-     {{>footer}}
-
      <script src="/js/app.js"></script>
+     <script src="https://kit.fontawesome.com/21e40e4bb7.js" crossorigin="anonymous"></script>
 </body>   
 
 </html>
