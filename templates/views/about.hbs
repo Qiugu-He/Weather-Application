@@ -3,19 +3,16 @@
 <head>
     <title>About</title>
     <link rel ="icon" href ="img/22.png">
-    <link rel="stylesheet" href = "/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href = "/css/about.css">
 </head>
 
 <body>
-    <div class="main-content">
+    <div class="main-container">
          {{>header}}
-
-        <p>This is site was created by Qiugu He. It use data from mapbox.com and darksky.net!</p>
-
-        <img class = "portrait" src="/img/11.jpg">
+        <p style="font-size: 150%;">This is site was created by Qiu. Forecast data fetched from darksky API and Geocode fetched from mapbox API!</p>
+        <img src="/img/11.jpg" style="width:50%;height:50%;">
     </div>
-
-    {{>footer}}
 </body>   
 
 </html>
