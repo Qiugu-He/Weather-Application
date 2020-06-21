@@ -1,16 +1,16 @@
 console.log("Client side is set up!")
 
 const weatherForm = document.querySelector('form')
-const search = document.querySelector('input')
+const search = document.querySelector('input') // the content of input
+
 const messageOne = document.querySelector('#message-1')
 const messageTwo = document.querySelector('#message-2')
-const messageZero = document.querySelector('#message-0')
 
-
+//event handler
 weatherForm.addEventListener('submit', (e)=>{
     e.preventDefault()
 
-    const location = search.value
+    const location = search.value // get the user enter location
     messageOne.textContent='Loading ...'
     messageTwo.textContent = ''
 
