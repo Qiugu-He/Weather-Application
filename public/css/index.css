@@ -100,6 +100,7 @@ button:hover{
     background: white;
     color: #F6D6B8; 
 }
+
 /*----------------------------*/
 footer {
     position: fixed;
@@ -116,67 +117,78 @@ footer {
 
 
 /*----------- Responsive --------------=*/
+@media only screen and (max-width: 1024px) {
+    .main-container{
+        top:10%;
+    }
 
-@media only screen and (max-width: 800px) {
-    .bg {
-      /* The file size of this background image is 93% smaller
-         to improve page load speed on mobile internet connections */
-      background-image: url("/img/bgm.jpg");
+    .sub-container p{
+        font-size: 25px;
+    }
+    .result p{
+        font-size: 20px;
     }
 }
 
-
 @media only screen and (max-width: 800px) {
-  .bg {
-    /* The file size of this background image is 93% smaller
-       to improve page load speed on mobile internet connections */
-    background-image: url("/img/bgm.jpg");
-  }
+    h1{
+        font-size:50px;
+    }
+    .main-container{
+        top:10%;
+    }
+    .sub-container p{
+        font-size: 23px;
+    }
+    .result p{
+        font-size: 15px;
+    }
+
+    footer {
+        border-top: 1px solid #eeeeee;
+        font-size: 15px;
+        margin-top:42%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    body {
+        background-color: #eeeeee;
+    }
+    h1{
+        font-size:45px;
+    }
+    .topnav a{
+        font-size:15px;
+    }
+    .main-container{
+        top:13%;
+    }
+    .sub-container {
+        margin-left:5%;
+        margin-right:5%;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 1%;
+    }
+    .sub-container p{
+        font-size: 15px;
+    }
+    .result p{
+        font-size: 15px;
+    }
+    input{
+        font-size: 10px;
+    }
+    button{
+        font-size: 10px;
+    }
+
+    footer {
+        margin-top:100%;
+    }
+
 }
 
 
-  @media only screen and (max-width: 500px) {
-    .bg {
-      /* The file size of this background image is 93% smaller
-         to improve page load speed on mobile internet connections */
-      background-image: url("/img/bgm.jpg");
-    }
 
-    h1{
-       font-size:40px;
-    }
-
-    .main-container{
-        top: 30%;
-        margin-left: 15
-    }
-    header a{
-        font-size: 20px;
-    }
-    .information p{
-        font-size: 20px;
-    }
-  }
-
-  @media only screen and (max-width: 400px) {
-    .bg {
-      /* The file size of this background image is 93% smaller
-         to improve page load speed on mobile internet connections */
-      background-image: url("/img/bgm.jpg");
-    }
-
-    h1{
-       font-size:40px;
-    }
-
-    .main-container{
-        top: 30%;
-    }
-    header a{
-        font-size: 20px;
-    }
-
-    .information p{
-        font-size: 20px;
-    }
-  }

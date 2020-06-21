@@ -17,23 +17,31 @@ body {
     text-align: center;
     z-index:3;
 }
-
-header{
+/*--------- header / Nav ------*/
+header{ 
     color:#F6D6B8;
+    font-family: 'Caveat', cursive;
+    text-align: center;
+    margin-top:-2%;
 }
-
 h1{
     font-size:70px;
     text-shadow:1px 1px 1px #000;
     margin-bottom: 1px;
 }
-header a{
-    color: #F6D6B8;
-    font-size:35px; 
-    margin-right: 16px;
-    text-decoration: none;
-    text-shadow:1px 1px 1px #000;
+.topnav{
+    overflow: hidden;
 }
-header a:hover{
-    color:white;
+
+.topnav a{
+    color:black;
+    font-size:20px;
+    font-family: 'Open Sans', sans-serif;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-decoration: none;
+    
+}
+.topnav a:hover{
+    background-color: rgba(206, 206, 206, 0.55);
 }
